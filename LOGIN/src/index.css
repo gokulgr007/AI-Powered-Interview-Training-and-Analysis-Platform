@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body, #root {
+  height: 100%;
+}
+
+/* Ensure page is scrollable and provide a visible scrollbar */
+body {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: auto;
+}
+
+/* Scrollbar styles (WebKit) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.35);
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100,100,100,0.35) transparent;
+}
+
+/* Blur background when an auth modal is open */
+.has-auth-modal .dashboard-root {
+  transition: filter 200ms ease, transform 200ms ease;
+  filter: blur(2px) brightness(1.10);
+  transform: scale(0.998);
+}
+
+/* Keep interactions on controls while blurred; overlay captures clicks */
+.has-auth-modal .dashboard-root * {
+  pointer-events: auto;
+}
+
+/* Additional global dark-mode overrides when <html> or body has class 'dark' */
+.dark, .dark-mode {
+  color-scheme: dark;
+}
+
+/* Force all text to white in dark mode */
+.dark, .dark-mode, .dark * , .dark-mode * {
+  color: #ffffff !important;
+}
+
+/* Page background & default text */
+.dark body, .dark-mode body {
+  background-color: #0b1220; /* deep slate */
+  color: #ffffff;
+}
+
+/* Invert common light panels to dark panels */
+.dark .bg-white, .dark-mode .bg-white {
+  background-color: #0f1724 !important;
+  color: #e6eef8 !important;
+}
+.dark .bg-gray-50, .dark-mode .bg-gray-50 {
+  background-color: #0f1724 !important;
+}
+.dark .text-gray-900, .dark-mode .text-gray-900 {
+  color: #e6eef8 !important;
+}
+.dark .text-gray-500, .dark-mode .text-gray-500 {
+  color: #94a3b8 !important;
+}
+.dark .border-gray-200, .dark-mode .border-gray-200 {
+  border-color: #273449 !important;
+}
+.dark .border-gray-100, .dark-mode .border-gray-100 {
+  border-color: #1f2a38 !important;
+}
+
+/* Buttons and actionable elements */
+.dark .bg-indigo-600, .dark-mode .bg-indigo-600 {
+  background-color: #4f46e5 !important;
+}
+button, input[type="button"], input[type="submit"], [role="button"], .btn {
+  cursor: pointer;
+}
+.dark .bg-indigo-50, .dark-mode .bg-indigo-50 {
+  background-color: #172554 !important;
+  color: #c7d2fe !important;
+}
+
+/* Tables and cards */
+.dark table thead { background-color: #071023; color: #94a3b8; }
+.dark .rounded-xl { background-clip: padding-box; }
+
+/* Ensure modal backgrounds stand out */
+.dark .modal, .dark-mode .modal, .dark form[role="dialog"] {
+  background-color: #081228 !important;
+  color: #e6eef8 !important;
+}
+
+/* Small helpers */
+.dark .bg-green-50 { background-color: #052e16 !important; color: #86efac !important; }
+.dark .bg-red-50 { background-color: #3b0b0b !important; color: #fecaca !important; }
+
+/* Force grid gap and main container to match dark background so gutters are dark */
+.dark .min-h-screen, .dark .max-w-6xl, .dark .grid {
+  background-color: #081224 !important;
+}
+
+/* Ensure the grid gap shows dark background instead of lighter strip */
+.dark .grid > * {
+  background-clip: padding-box;
+}
+
+/* Specific overrides for navigation and main content panels */
+.dark nav, .dark .dashboard-root, .dark main, .dark .lg\:col-span-3 {
+  background-color: transparent !important;
+}
+
+/* Make nav buttons text black on hover in dark mode (overrides .dark * !important) */
+.dark nav button:hover, .dark nav a:hover, .dark-mode nav button:hover, .dark-mode nav a:hover,
+html.dark nav button:hover, html.dark nav a:hover, html.dark nav button:hover *, html.dark nav a:hover *,
+html.dark .sidebar nav button:hover, html.dark .sidebar nav a:hover, html.dark .sidebar nav button:hover *, html.dark .sidebar nav a:hover * {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Specific: when nav item is a button element or has hover bg, ensure text/icon turn black */
+html.dark aside nav button:hover, html.dark aside nav button:hover *,
+html.dark aside nav a:hover, html.dark aside nav a:hover *,
+html.dark aside nav div:hover, html.dark aside nav div:hover * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* When a nav item is selected (uses bg-indigo-100), make its text and icon black in dark mode */
+html.dark nav .bg-indigo-100, html.dark nav .bg-indigo-100 *,
+html.dark aside nav .bg-indigo-100, html.dark aside nav .bg-indigo-100 * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+

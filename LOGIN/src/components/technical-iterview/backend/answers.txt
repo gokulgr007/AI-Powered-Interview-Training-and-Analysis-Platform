@@ -1,0 +1,14 @@
+1) twoSum
+Hint: Think in terms of complements — while iterating once, keep a structure that lets you check whether the complement for the current number has been seen already in O(1).
+
+2) reverseString
+Hint: Use two indices at the ends of the array and swap elements inward until they meet; do it in-place without allocating another array.
+
+3) isPalindrome
+Hint: Use two pointers and skip characters that are not letters or digits. Compare letters case-insensitively.
+
+4) maxSubArray
+Hint: Maintain a running best subarray sum that ends at the current position; update a global maximum each step. If the running sum becomes worse than starting fresh at the current element, reset it.
+
+5) maxArea
+Hint: Place pointers at both ends; area = min(height[left], height[right]) * distance. Move the pointer at the shorter height inward to seek a taller boundary.

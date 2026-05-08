@@ -1,0 +1,48 @@
+{
+  "name": "login-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:builder\" \"npm run dev:python\" \"npm run dev:gd_interview\" \"npm run dev:hr_interview\" \"npm run dev:interview_mentor\" \"npm run dev:technical_bot\" \"npm run dev:evaluator\"",
+    "dev:frontend": "cd LOGIN && npm run dev",
+    "dev:backend": "cd Backend && node server.js",
+    "dev:builder": "cd LOGIN/src/components/resume-builder-server && node server.js",
+    "dev:python": "cd LOGIN/src/components/Resume-Analyzer && python main.py",
+    "dev:gd_interview": "cd LOGIN/src/components/gd--final/backend && python app.py",
+    "dev:hr_interview": "cd LOGIN/src/components/hr_interview/backend && python app.py",
+    "dev:interview_mentor": "cd LOGIN/src/components/Dashboard-ui/backend && uvicorn main:app --reload --port 8001",
+    "dev:technical_bot": "cd LOGIN/src/components/technical-iterview/backend && uvicorn server:app --reload --port 8002",
+    "dev:evaluator": "uvicorn Backend.evaluator_server:app --host 127.0.0.1 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-toast": "^1.2.15",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@tanstack/react-query": "^5.90.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "face-api.js": "^0.20.0",
+    "framer-motion": "^12.23.26",
+    "jspdf": "^4.0.0",
+    "lucide-react": "^0.562.0",
+    "react-hook-form": "^7.71.1",
+    "react-hot-toast": "^2.6.0",
+    "react-phone-number-input": "^3.4.14",
+    "react-resizable-panels": "^2.0.19",
+    "recharts": "^3.6.0",
+    "socket.io-client": "^4.8.3",
+    "sonner": "^2.0.7",
+    "sooner": "^1.1.4",
+    "stripe": "^20.2.0",
+    "tailwind-merge": "^3.4.0",
+    "wouter": "^3.9.0",
+    "zod": "^4.3.5"
+  }
+}

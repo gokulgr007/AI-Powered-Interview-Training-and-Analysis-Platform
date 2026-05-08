@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1768102670,
+    "topic": "Artificial Intelligence in Healthcare",
+    "timestamp": 1768102670,
+    "overall": 24,
+    "communication": 20,
+    "leadership": 42,
+    "critical_thinking": 15,
+    "verdict": "REJECT",
+    "strengths_html": "\n    <li>Improves diagnostics accuracy</li>\n    <li>Enhances personalized treatment options</li>\n    <li>Reduces administrative burdens on healthcare professionals</li>\n",
+    "improvements_html": "\n    <li>Clarify terminology and abbreviations</li>\n    <li>Structure arguments more coherently</li>\n    <li>Provide specific examples of AI applications in healthcare</li>\n",
+    "raw_html": "<div class='report-wrapper'>\n<div class='report-header'>\n<h2>Candidate Report</h2>\n<p class='topic-badge'>Artificial Intelligence in Healthcare</p>\n<div class='overall-score'><span>Overall Score</span><strong>24/100</strong></div>\n</div>\n<div class='score-grid'>\n<div class='metric-card'><h4>Communication</h4><div class='progress-bar'><div style='width: 20%'></div></div></div>\n<div class='metric-card'><h4>Leadership</h4><div class='progress-bar'><div style='width: 42%'></div></div></div>\n<div class='metric-card'><h4>Critical Thinking</h4><div class='progress-bar'><div style='width: 15%'></div></div></div>\n</div>\n<div class='feedback-container'>\n<div class='feedback-item positive'><h3>✅ Strengths</h3><ul>\n\n    <li>Improves diagnostics accuracy</li>\n    <li>Enhances personalized treatment options</li>\n    <li>Reduces administrative burdens on healthcare professionals</li>\n\n</ul></div>\n<div class='feedback-item negative'><h3>⚠️ Improvements</h3><ul>\n\n    <li>Clarify terminology and abbreviations</li>\n    <li>Structure arguments more coherently</li>\n    <li>Provide specific examples of AI applications in healthcare</li>\n\n</ul></div>\n</div>\n<div class='verdict-box'>Verdict: REJECT</div>\n</div>"
+  }
+]

@@ -1,0 +1,39 @@
+.react-phone-input .PhoneInputInput,
+.react-phone-input .PhoneInputInput:focus {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.react-phone-input .PhoneInputInput:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 6px rgba(99,102,241,0.06);
+}
+
+.react-phone-input .PhoneInputCountrySelect {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 0 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.react-phone-input .PhoneInputCountrySelectArrow {
+  display: none;
+}
+
+.react-phone-input .PhoneInputCountry {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* small responsive tweak */
+@media (max-width: 640px) {
+  .react-phone-input .PhoneInputInput {
+    padding: 0.5rem;
+  }
+}
